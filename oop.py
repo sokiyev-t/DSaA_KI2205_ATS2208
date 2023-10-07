@@ -47,24 +47,24 @@ e2=Employee("Nigora", 22, 74, "famale")
 e3=Employee("Madina", 22, 74, "female")
 e4=Employee("Mansur", 17, 71, "male")
 
-a=[s1,s2,e1,e2,e3,e4]
-
-for p in a:
-    if p.get_age()>18 and p.sex=="male":
-        print("--------------------------")
-        p.print()
-
-
-
-
-T sum<T>(T a, T b) {
-    return a+b;
-}
-
-
-int k=sum<int>(3,4);
-
-Vector<int> v;
+# a=[s1,s2,e1,e2,e3,e4]
+#
+# for p in a:
+#     if p.get_age()>18 and p.sex=="male":
+#         print("--------------------------")
+#         p.print()
+#
+#
+#
+#
+# T sum<T>(T a, T b) {
+#     return a+b;
+# }
+#
+#
+# int k=sum<int>(3,4);
+#
+# Vector<int> v;
 
 
 
