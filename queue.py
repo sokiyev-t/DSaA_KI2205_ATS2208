@@ -2,6 +2,7 @@ class Node(object):
     def __init__(self, val):
         self.val = val
         self.next = None
+        self.prev = None
 
     def get_data(self):
         return self.val
@@ -15,34 +16,39 @@ class Node(object):
     def set_next(self, next):
         self.next = next
 
+    def get_prev(self):
+        return self.prev
+
+    def set_prev(self, prev):
+        self.prev = prev
+
 
 class Queue:
-    def __init__(self, head=None):
-        self.head = head
-        self.tail=None
+    def __init__(self):
+        self.head = None
+        self.tail = None
 
     def push(self, val):
         new_head = Node(val)
+
         new_head.set_next(self.head)
+
+        if self.head is not None:
+            self.head.set_prev(new_head)
+
         self.head = new_head
-        # self.count+=1
+        if self.tail is None:
+            self.tail=self.head
 
     def pop(self):
         if not self.is_empty():
-            data = self.head.get_data()
-            self.head = self.head.get_next()
+            data = self.tail.get_data()
+            self.tail=self.tail.get_prev()
             return data
         return None
 
-        # if self.count>0:
-        #     data=self.head.get_data()
-        #     self.head=self.head.get_next()
-        #     self.count-=1
-        #     return data
-        # return None
-
     def is_empty(self):
-        return self.head is None
+        return self.tail is None
 
 
 s = Queue()
