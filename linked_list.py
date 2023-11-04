@@ -1,5 +1,6 @@
 import sys
 
+
 class Node(object):
     def __init__(self, val):
         self.val = val
@@ -102,14 +103,13 @@ class LinkedList(object):
             # self.count -= 1
 
     def get_count(self):
-        count=0
-        h=self.head
+        count = 0
+        h = self.head
         while h:
             h = h.get_next()
             print(f"Finding count: {count}")
-            count+=1
+            count += 1
         return count
-
 
         """
         Return the length of the Linked List
@@ -126,13 +126,12 @@ class LinkedList(object):
         return self.head == None
 
 
-
-l=LinkedList()
+l = LinkedList()
 l.insert(12)
 l.insert(23)
 l.insert(45)
-v=l.head.get_next().get_next().get_data()
-c=l.get_count()
-s=sys.getsizeof(l)
+v = l.head.get_next().get_next().get_data()
+c = l.get_count()
+s = sys.getsizeof(l)
 
 print(f"Size of list is {s} count is: {c} value of header: {v}")
