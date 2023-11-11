@@ -37,7 +37,7 @@ class Deque:
         if self.tail is None:
             self.tail=self.head
 
-    def pop_front(self):
+    def pop_back(self):
         if not self.is_empty():
             data = self.tail.get_data()
             self.tail=self.tail.get_prev()
@@ -57,7 +57,7 @@ class Deque:
         if self.head is None:
             self.head = self.tail
 
-    def pop_back(self):
+    def pop_front(self):
         if not self.is_empty():
             data = self.head.get_data()
             self.head = self.head.get_next()
